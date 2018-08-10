@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		082813D72116AB5B00D6A93D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082813D62116AB5B00D6A93D /* Item.swift */; };
 		082813D92116AB6700D6A93D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082813D82116AB6700D6A93D /* Category.swift */; };
+		082813DB211BFB6C00D6A93D /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082813DA211BFB6C00D6A93D /* SwipeTableViewController.swift */; };
 		087DBEEC21157D8A0044101B /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DBEEB21157D8A0044101B /* CategoryViewController.swift */; };
 		08F7277820A2D1C3006093ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F7277720A2D1C3006093ED /* AppDelegate.swift */; };
 		08F7277A20A2D1C3006093ED /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F7277920A2D1C3006093ED /* TodoListViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		082813D62116AB5B00D6A93D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		082813D82116AB6700D6A93D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		082813DA211BFB6C00D6A93D /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		087DBEEB21157D8A0044101B /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		08F7277420A2D1C3006093ED /* Todeoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todeoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08F7277720A2D1C3006093ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			children = (
 				087DBEEB21157D8A0044101B /* CategoryViewController.swift */,
 				08F7277920A2D1C3006093ED /* TodoListViewController.swift */,
+				082813DA211BFB6C00D6A93D /* SwipeTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -224,13 +227,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Todeoy/Pods-Todeoy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -263,6 +270,7 @@
 				087DBEEC21157D8A0044101B /* CategoryViewController.swift in Sources */,
 				08F7277A20A2D1C3006093ED /* TodoListViewController.swift in Sources */,
 				08F7277820A2D1C3006093ED /* AppDelegate.swift in Sources */,
+				082813DB211BFB6C00D6A93D /* SwipeTableViewController.swift in Sources */,
 				082813D92116AB6700D6A93D /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,10 +419,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TT2K57S6Q3;
 				INFOPLIST_FILE = Todeoy/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JoshBourke.Todeoy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -430,10 +435,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TT2K57S6Q3;
 				INFOPLIST_FILE = Todeoy/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JoshBourke.Todeoy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
